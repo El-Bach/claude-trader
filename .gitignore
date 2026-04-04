@@ -1,0 +1,55 @@
+# ── Claude Code internal files ────────────────────────────────────────────────
+.claude/
+
+# ── Credentials & secrets ─────────────────────────────────────────────────────
+.env
+*.env
+.env.*
+!.env.example
+
+# ── Trade logs & account data (never commit real P&L / account numbers) ───────
+logs/
+data/
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+*.whl
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+.env.bak
+
+# ── IDE / editor ──────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Reports (generated files, not source) ─────────────────────────────────────
+logs/*.xlsx
+logs/*.csv
+logs/*.json
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/

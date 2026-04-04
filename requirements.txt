@@ -1,0 +1,23 @@
+# APEX Capital AI — Python Dependencies
+# Install with: pip install -r requirements.txt
+# Requires Python 3.10+ (zoneinfo is built-in from 3.9)
+
+# Core AI
+anthropic>=0.40.0           # Claude API (Sonnet + Opus)
+
+# Broker connectivity
+MetaTrader5>=5.0.4          # MT5 Python bridge (Windows only)
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Market data & news feeds
+requests>=2.28.0
+feedparser>=6.0.0           # RSS feeds (FXStreet, ForexLive, Reuters)
+
+# Configuration & utilities
+python-dotenv>=1.0.0
+
+# Reports (optional — only for create_backtest_report.py)
+openpyxl>=3.1.0
