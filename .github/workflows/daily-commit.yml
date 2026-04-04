@@ -1,38 +1,23 @@
-# .github/workflows/daily-commit.yml
-# Place this file in ANY active project repo (e.g. TradeAI-Gold)
-# It makes a small automatic commit every day so your graph stays green
-# The commit logs real data — today's date and a status ping
-
 name: Daily Activity Commit
 
 on:
   schedule:
-    - cron: "30 5 * * *"   # Every day at 08:30 Beirut (UTC+3)
-  workflow_dispatch:         # Can also trigger manually
+    - cron: "30 5 * * *"
+  workflow_dispatch:
 
 jobs:
   daily-commit:
-    name: Log daily activity
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Configure git identity
-        run: |
+      - run: |
           git config user.name "El-Bach"
           git config user.email "becharaabdelmassih@gmail.com"
-
-      - name: Write activity log entry
-        run: |
           mkdir -p logs
-          echo "$(date '+%Y-%m-%d %H:%M') UTC+3 | Bot active | Build in progress" >> logs/activity.log
-
-      - name: Commit and push
-        run: |
-          git add logs/activity.log
-          git diff --staged --quiet || git commit -m "chore: daily activity log $(date '+%Y-%m-%d')"
+          echo "$(date '+%Y-%m-%d %H:%M') | active" >> logs/activity.log
+          git add -A
+          git diff --staged --quiet && echo "nothing to commit" || git commit -m "chore: daily log $(date '+%Y-%m-%d')"
           git push
