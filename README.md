@@ -9,7 +9,7 @@
 [![MT5](https://img.shields.io/badge/MetaTrader-5-1C5FA8?logoColor=white)](https://www.metatrader5.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22C55E)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
-[![claude trader AI Dashboard](assets/dashboard.gif)
+![APEX Capital AI Dashboard](assets/dashboard.gif)
 
 **14 specialized Claude AI agents** that read the market, form a daily view, find entries, manage risk, monitor positions in real time, and report performance — fully autonomously, 24/7.
 
