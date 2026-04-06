@@ -10,6 +10,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-22C55E)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 ![claude trader AI Dashboard](assets/dashboard.gif)
+
 **14 specialized Claude AI agents** that read the market, form a daily view, find entries, manage risk, monitor positions in real time, and report performance — fully autonomously, 24/7.
 
 [Features](#features) · [Architecture](#architecture) · [Backtest Results](#backtest-results) · [Quick Start](#quick-start) · [Configuration](#configuration) · [How It Works](#how-it-works)
